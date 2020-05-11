@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+  min-width: 320px;
+  font-size: 0;
+  background-image: url(../images/back_sun.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+h1, h2, h3, a, p  {
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+  text-decoration: none;
+}
+p, a, h3 {
+  font-size: 18px;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.header {
+  display: flex;
+  background-color: #f70;
+  background-image: url(../images/baner_sun.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header__content {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+  padding: 15px 6px;
+}
+.round-image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15vw;
+  height: 15vw;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  border: solid 2px #fff;
+  overflow: hidden;
+}
+.round-image img {
+  width: 100%;
+}
+.header__info {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 4%;
+}
+.header__info h1 {
+  font-style: italic;
+  font-weight: 700;
+  color: #fff;
+}
+.header__slogan {
+  padding-top: 8px;
+  min-height: 20px;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: normal;
+  color: #fff;
+}
+.header__info h1, .header__slogan {
+  text-shadow: 2px 2px 4px rgba(0,0,0,.8);
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255,255,255,0.2);
+}
+.title {
+  width: 100%;
+  padding: 20px 6px 5px;
+  text-align: left;
+}
+.photo {
+  padding-top: 10px;
+}
+.photogrid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 3px;
+}
+.photogrid__column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 3px;
+}
+.photogrid__column img {
+  width: 100%;
+  margin-top: 6px;
+  vertical-align: middle;
+}
+.places {
+  padding: 0;
+}
+.places__block {
+  padding: 20px 6px;
+  margin: 0 6px;
+  background-color: #777;
+}
+.places__image {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+  width: 40%;
+}
+.places__image img {
+  width: 100%;
+}
+.places__info {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 20px;
+  width: 60%;
+}
+.places h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+}
+.places__text {
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 0.15em;
+  text-align: left;
+  color: #fff;
+}
+
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.comments__block {
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 10px 6px;
+  text-align: center;
+  background-color: #ddd;
+}
+.comments__block .round-image {
+  vertical-align: top;
+  max-width: 100px;
+  max-height: 100px;
+}
+.comments__info {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding: 0 10px;
+}
+.comments__name, .comments__text {
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+.comments__name {
+  font-style: italic;
+}
+.comments__text {
+  text-align: left;
+}
+
+.photo {
+  width: 100%;
+  margin: auto;
+}
+.photo img {
+  width: 100%;
+  margin: auto;
+}
+.video {
+  padding: 5px 0 30px;
+}
+
+.video__frame {
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+  vertical-align: middle;
+}
+.video__frame video {
+  width: 100%;
+  max-height: 100vh;
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
+.footer {
+  display: flex;
+  height: 120px;
+  background-color: #f70;
+  background-image: url(../images/footer_sun.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer__content {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+.footer__info {
+  min-height: 20px;
+  font-size: 16px;
+  font-style: italic;
+  color: #fff;
+}
+.footer__copy {
+  padding-top: 10px;
+  font-size: 10px;
+  font-style: italic;
+  color: #fff;
+}
+.footer__info, .footer__copy {
+  text-shadow: 1px 1px 3px #000;
+}
+
+@media (max-width: 1020px) {
+  .header__content {
+     padding: 10px 18px;
+  }
+  .header__info h1 {
+     font-size: 28px;
+  }
+  .header__slogan {
+     font-size: 22px;
+   }
+}
+@media (max-width: 820px) {
+  .header__info h1 {
+     font-size: 24px;
+  }
+  .header__slogan {
+     font-size: 19px;
+  }
+  .comments__name, .comments__text {
+     font-size: 12px;
+  }
+  .places h3 {
+     font-size: 17px;
+  }
+  .places__text {
+     padding: 10px 0;
+     font-size: 14px;
+     line-height: 1.3em;
+     letter-spacing: 0.12em;
+  }
+}
+@media (max-width: 620px) {
+  .header__info h1, .header__slogan {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+  h2 {
+     font-size: 18px;
+     letter-spacing: 2px;
+  }
+  .photo {
+     padding-top: 5px;
+  }
+  .photogrid__column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .video__frame {
+    width: 80%;
+  }
+  .header__content {
+     padding: 10px 18px;
+  }
+  .header__info h1 {
+     font-size: 18px;
+  }
+  .header__slogan {
+     font-size: 14px;
+  }
+  .comments__block {
+     flex: 100%;
+     max-width: 100%;
+     padding: 10px 15px;
+     text-align: left;
+  }
+  .comments__info {
+     width: 80%;
+     padding: 5px 20px;
+  }
+  .comments__name, .comments__text {
+     font-size: 14px;
+  }
+  .places__image {
+     width: 100%;
+  }
+  .places__info {
+     display: inline-block;
+     vertical-align: top;
+     padding: 20px 10px;
+     width: 100%;
+   }
+  .footer {
+    height: 90px;
+}
+@media (max-width: 420px) {
+  .photogrid__column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .video__frame {
+    width: 100%;
+  }
+  .header__content {
+     padding: 10px 15px;
+  }
+  .header__info h1 {
+     font-size: 14px;
+  }
+  .header__slogan {
+     font-size: 11px;
+  }
+  .footer__info {
+    font-size: 14px;
+}
+.footer__copy {
+  font-size: 8px;
+}
+}
