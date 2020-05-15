@@ -4,7 +4,9 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  /* Выбранный шрифт не соотвествует использованному в макете*/
   background-color: #ddd;
+  /* Можно лучше: лучше использовать полные наименовния цветов. */
   min-width: 320px;
   font-size: 0;
   background-image: url(../images/back_sun.jpg);
@@ -29,10 +31,14 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+/*Задавать общие стили по наименования тега - плохая практка, так как это может спровоцировать неконтролруемое поведение элементов в тех местах, где это не нужно. */
+
 .header {
   display: flex;
   background-color: #f70;
+  /* Можно лучше: лучше использовать полные наименовния цветов. */
   background-image: url(../images/baner_sun.jpg);
+  /* Надо исправить: путь к изображению написан некорректтно, изображение не отображается */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -40,6 +46,7 @@ h2 {
 .header__content {
   width: 100%;
   max-width: 1000px;
+  /* Можно лучше: не стоит задавать максимальную ширину блока при наличии брейкпоинта c большим значением ширины  */
   margin: auto;
   text-align: left;
   padding: 15px 6px;
@@ -51,6 +58,7 @@ h2 {
   height: 15vw;
   max-width: 120px;
   max-height: 120px;
+  /* Надо исправить: высота задается в vh, а не в vw */
   border-radius: 50%;
   border: solid 2px #fff;
   overflow: hidden;
@@ -65,6 +73,7 @@ h2 {
   padding-left: 4%;
 }
 .header__info h1 {
+  /* Надо исправить: обращаться к стилям элмента по тегу - не самая хорошая практика  */
   font-style: italic;
   font-weight: 700;
   color: #fff;
@@ -77,6 +86,8 @@ h2 {
   font-weight: normal;
   color: #fff;
 }
+
+/* Надо исправить: обращаться к стилям элмента по тегу - не самая хорошая практика  */
 .header__info h1, .header__slogan {
   text-shadow: 2px 2px 4px rgba(0,0,0,.8);
 }
@@ -106,6 +117,8 @@ h2 {
   max-width: 25%;
   padding: 0 3px;
 }
+
+/* Надо исправить: обращаться к стилям элмента по тегу - не самая хорошая практика  */
 .photogrid__column img {
   width: 100%;
   margin-top: 6px;
@@ -118,6 +131,7 @@ h2 {
   padding: 20px 6px;
   margin: 0 6px;
   background-color: #777;
+   /* Можно лучше: лучше использовать полные наименовния цветов. */
 }
 .places__image {
   display: inline-block;
@@ -125,6 +139,7 @@ h2 {
   padding: 0 10px;
   width: 40%;
 }
+/* Надо исправить: обращаться к стилям элмента по тегу - не самая хорошая практика  */
 .places__image img {
   width: 100%;
 }
@@ -148,6 +163,7 @@ h2 {
   letter-spacing: 0.15em;
   text-align: left;
   color: #fff;
+   /* Можно лучше: лучше использовать полные наименовния цветов. */
 }
 
 .comments {
@@ -157,6 +173,7 @@ h2 {
 }
 .comments__block {
   flex: 33.3%;
+   /* Можно лучше: верстка сломается, если будет добавлен еще один комментарий, стоит поискать решение получше*/
   max-width: 33.3%;
   padding: 10px 6px;
   text-align: center;
@@ -189,6 +206,8 @@ h2 {
   width: 100%;
   margin: auto;
 }
+
+/* Надо исправить: обращаться к стилям элмента по тегу - не самая хорошая практика  */
 .photo img {
   width: 100%;
   margin: auto;
@@ -213,7 +232,9 @@ h2 {
 .footer {
   display: flex;
   height: 120px;
+  /* Надо исправить: задавать фиксируемую высоту блока не самое хорошее решение. При возникновении новых элементов внутри блока верстка сломается. */
   background-color: #f70;
+  /* Можно лучше: лучше использовать полные наименовния цветов. */
   background-image: url(../images/footer_sun.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -244,6 +265,7 @@ h2 {
   text-shadow: 1px 1px 3px #000;
 }
 
+/* Общее замечание по коду внутри медиа-выражений: все описанные в комментариях ошибки (наименований, селекторов) применимы и к этому блоку. Автор проекта не учел все брейкпоинты, указанные в исходном макете.*/
 @media (max-width: 1020px) {
   .header__content {
      padding: 10px 18px;
@@ -347,6 +369,7 @@ h2 {
   .footer__info {
     font-size: 14px;
 }
+/* Можно лучше: стоит соблюдать отступы внутри селектора для лучшей читаемости. */
 .footer__copy {
   font-size: 8px;
 }
